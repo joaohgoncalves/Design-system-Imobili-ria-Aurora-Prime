@@ -17,6 +17,8 @@
   --ds-radius-sm: 4px;
   --ds-radius-md: 8px;
   --ds-radius-lg: 14px;
+  --ds-shadow-sm: 0 10px 30px rgba(0, 0, 0, 0.045);
+  --ds-shadow-md: 0 18px 70px rgba(0, 0, 0, 0.06);
 }
 
 * {
@@ -57,12 +59,14 @@ select {
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  border-radius: 999px;
-  padding: 0.85rem 1.4rem;
+  min-height: 2.75rem;
+  border-radius: var(--ds-radius-sm);
+  padding: 0.78rem 1.15rem;
   border: 1px solid transparent;
   background: var(--ds-accent);
   color: white;
   font-weight: 700;
+  font-size: 0.9rem;
   transition: transform 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
 }
 
@@ -73,6 +77,7 @@ select {
 .ds-btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+  transform: none;
 }
 
 .ds-btn-secondary {
@@ -99,7 +104,7 @@ select {
 .ds-input,
 .ds-input-box {
   width: 100%;
-  border-radius: 1rem;
+  border-radius: var(--ds-radius-md);
   border: 1px solid rgba(0, 0, 0, 0.08);
   background: #ffffff;
   padding: 1rem;
@@ -122,7 +127,7 @@ select {
   align-items: center;
   gap: 0.75rem;
   padding: 1rem 1.2rem;
-  border-radius: 1rem;
+  border-radius: var(--ds-radius-md);
 }
 
 .ds-alert-danger {
@@ -139,13 +144,14 @@ select {
 
 .ds-panel {
   background: white;
-  border-radius: 1rem;
+  border-radius: var(--ds-radius-md);
   border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: var(--ds-shadow-sm);
 }
 
 .ds-panel-flat {
   background: white;
-  border-radius: 1rem;
+  border-radius: var(--ds-radius-md);
 }
 
 .ds-eyebrow {
@@ -158,23 +164,23 @@ select {
 
 .ds-heading-xl {
   margin: 0;
-  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-size: 2.6rem;
   line-height: 1.03;
-  font-weight: 700;
+  font-weight: 650;
 }
 
 .ds-heading-lg {
   margin: 0;
-  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  font-size: 1.85rem;
   line-height: 1.05;
-  font-weight: 700;
+  font-weight: 650;
 }
 
 .ds-heading-md {
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.2;
-  font-weight: 700;
+  font-weight: 650;
 }
 
 .ds-copy {
@@ -208,7 +214,7 @@ select {
   align-items: center;
   justify-content: center;
   padding: 0.45rem 0.85rem;
-  border-radius: 999px;
+  border-radius: var(--ds-radius-sm);
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -239,4 +245,24 @@ textarea.ds-input-box,
 select.ds-input-box,
 input.ds-input-box {
   min-height: 3rem;
+}
+
+@media (min-width: 768px) {
+  .ds-heading-xl {
+    font-size: 3.25rem;
+  }
+
+  .ds-heading-lg {
+    font-size: 2.1rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .ds-heading-xl {
+    font-size: 4rem;
+  }
+
+  .ds-heading-lg {
+    font-size: 2.25rem;
+  }
 }
