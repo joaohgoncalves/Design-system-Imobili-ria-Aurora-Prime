@@ -112,9 +112,9 @@ export function DesignSystemPage() {
                 </div>
               </Panel>
               <Panel className="bg-black p-8 text-[#f9f9f7]">
-                <p className="text-[0.68rem] uppercase tracking-[0.34em] text-white/50">Dark usage</p>
-                <h3 className="mt-5 max-w-sm text-4xl font-medium leading-tight">Portfolio-grade property experiences.</h3>
-                <p className="mt-6 text-sm leading-7 text-white/60">Use dark blocks sparingly for moments that need stronger contrast.</p>
+                <p className="text-[0.68rem] uppercase tracking-[0.34em] text-black/50">Dark usage</p>
+                <h3 className="mt-5 max-w-sm text-4xl font-medium leading-tight text-black">Portfolio-grade property experiences.</h3>
+                <p className="mt-6 text-sm leading-7 text-black/60">Use dark blocks sparingly for moments that need stronger contrast.</p>
               </Panel>
             </div>
           </SystemSection>
